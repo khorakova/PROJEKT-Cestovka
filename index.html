@@ -5,103 +5,148 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cestovka</title>
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Open+Sans&display=swap" rel="stylesheet">
   </head>
   <body>
+    <div class="travel-agency">
     <header class="header">
-      <img class="logo" src="images/logo.svg" alt="logo" />
-      <div class="menu">
-        <ul>
+      <div class="logo">
+      <img class="logo__image" src="images/logo.svg" alt="logo" />
+      </div>
+      <ul class="menu">
           <li class="menu__item">Last Minute</li>
           <li class="menu__item">Destinace</li>
           <li class="menu__item">Časté otázky</li>
-        </ul>
-      </div>
+      </ul>
     </header>
 
     <div class="photo-grid">
-      <div class="photo-promo">
-        <img class="photo-promo__image photo-promo__image--big" src="images/palmy" alt="pláž s palmami"/>
-        <p class="photo-promo__price">17 600 Kč</p>
+      <div class="photo-promo photo-promo--big photo-promo__background photo-promo__background--first">
+        <!-- <img class="photo-promo__image photo-promo__image--big" src="images/palmy.png" alt="pláž s palmami"/> -->
+        <div class="photo-promo__price">
+        <p class="photo-promo__price--in">17 600 Kč</p>
+        </div>
+        <div class="photo-promo__description">
         <h2 class="photo-promo__title photo-promo__title--big">
           Pohoda pod palmami
         </h2>
         <p class="photo-promo__subtitle">
           Nejlepší dovolená pro nejvíc nejlínější lidi na světě
         </p>
+        </div>
       </div>
-      <div class="photo-promo">
-        <img class="photo-promo__image" src="images/jezero2.png" alt="jezero"/>
-        <p class="photo-promo__price">8 490 Kč</p>
-        <h2 class="photo-promo__title photo-promo__title--big">
+      <div class="photo-promo photo-promo__background photo-promo__background--second">
+        <!-- <img class="photo-promo__image" src="images/jezero2.png" alt="jezero"/> -->
+        <div  class="photo-promo__price">
+        <p class="photo-promo__price--in">8 490 Kč</p>
+        </div>
+        <div class="photo-promo__description">
+        <h2 class="photo-promo__title">
           Klid u jezera
         </h2>
+        </div>
       </div>
-      <div class="photo-promo">
-        <img class="photo-promo__image" src="images/nakole.png" alt="výlet na kole"/>
-        <p class="photo-promo__price">4 990 Kč</p>
-        <h2 class="photo-promo__title photo-promo__title--big">
+      <div class="photo-promo photo-promo__background photo-promo__background--third">
+        <!-- <img class="photo-promo__image" src="images/nakole.png" alt="výlet na kole"/> -->
+        <div class="photo-promo__price">
+        <p class="photo-promo__price--in">4 990 Kč</p>
+        </div>
+        <div class="photo-promo__description">
+        <h2 class="photo-promo__title">
           Výlet na kole
         </h2>
+        </div>
       </div>
     </div>
 
-    <div class="display-flex">
+    <div class="services-grid">
         <div class="services-item">
-            <img class="services-item__image" src="images/map.svg" alt="symbol mapy">
+          <div class="services-item__image">
+            <img src="images/map.svg" alt="symbol mapy">
+          </div>
+            <div class="services-item__content">
             <h4 class="services-item__title">Podpora na místě</h4>
             <p class="services-item__description">V cílové destinaci jsou k dispozici naši delegáti, kteří vám vždy rádi poradí.</p>
-        </div>
+            </div>
+          </div>
         <div class="services-item">
-            <img class="services-item__image" src="images/plane.svg" alt="symbol letadla">
+          <div class="services-item__image">
+            <img src="images/plane.svg" alt="symbol letadla">
+          </div>
+          <div class="services-item__content">
             <h4 class="services-item__title">Služby na letišti</h4>
             <p class="services-item__description">Při odletu tam i zpět za vás odbavíme vaše zavadla. Na letišti nebudete čekat.</p>
         </div>
+          </div>
         <div class="services-item">
-            <img class="services-item__image" src="images/globe.svg" alt="symbol zeměkoule">
+          <div class="services-item__image">
+            <img src="images/globe.svg" alt="symbol zeměkoule">
+          </div>
+          <div class="services-item__content">
             <h4 class="services-item__title">Do celého světa</h4>
             <p class="services-item__description">Nabízíme pravidelné slevy na vybraných destinací na všech kontinentech.</p>
-        </div>
+          </div>
+          </div>
         <div class="services-item">
-            <img class="services-item__image" src="images/shield.svg" alt="symbol štítu">
+          <div class="services-item__image" >
+            <img src="images/shield.svg" alt="symbol štítu">
+            </div>
+            <div class="services-item__content">
             <h4 class="services-item__title">Vaše bezpečí</h4>
             <p class="services-item__description">Není-li v cílové destinaci v čase odletu bezpečno, vrátíme vám peníze.</p>
-        </div>
+            </div>
+          </div>
     </div>
 
     <div class="last-minute">
         <h2 class="last-minute__title">Last minute zájezdy</h2>
         <div class="photo-grid">
-            <div class="photo-promo">
-              <img class="photo-promo__image" src="images/podkova.png" alt="grand canyon"/>
-              <p class="photo-promo__price">18 500 Kč</p>
-              <h2 class="photo-promo__title photo-promo__title--big">
-                Grand Canyon
-              </h2>
-            </div>
-            <div class="photo-promo">
-              <img class="photo-promo__image" src="images/zatoka.png" alt="zátoka"/>
-              <p class="photo-promo__price">8 900 Kč</p>
-              <h2 class="photo-promo__title photo-promo__title--big">
-                Pěšky po Kanárských ostrovech
-              </h2>
-            </div>
-            <div class="photo-promo">
-                <img class="photo-promo__image photo-promo__image--big" src="images/lodicka.png" alt="jezero s loďkou"/>
-                <p class="photo-promo__price">15 900 Kč</p>
+        <div class="photo-promo photo-promo--big photo-promo__background photo-promo__background--sixth">
+                <!-- <img class="photo-promo__image photo-promo__image--big" src="images/lodicka.png" alt="jezero s loďkou"/> -->
+                <div class="photo-promo__price">
+                <p class="photo-promo__price--in">15 900 Kč</p>
+                </div>
+                <div class="photo-promo__description">
                 <h2 class="photo-promo__title photo-promo__title--big">
                   Romantika u horského jezera
                 </h2>
                 <p class="photo-promo__subtitle">
                     Dechberoucí výhledy na horské štíty a zrcadlovou hladinu jezera.
                 </p>
+                </div>
               </div>
+            <div class="photo-promo photo-promo__background photo-promo__background--fourth">
+              <!-- <img class="photo-promo__image" src="images/podkova.png" alt="grand canyon"/> -->
+              <div class="photo-promo__price">
+              <p class="photo-promo__price--in">18 500 Kč</p>
+              </div>
+              <div class="photo-promo__description">
+              <h2 class="photo-promo__title">
+                Grand Canyon
+              </h2>
+              </div>
+            </div>
+            <div class="photo-promo photo-promo__background photo-promo__background--fifth">
+              <!-- <img class="photo-promo__image" src="images/zatoka.png" alt="zátoka"/> -->
+              <div class="photo-promo__price">
+              <p class="photo-promo__price--in">8 900 Kč</p>
+              </div>
+              <div class="photo-promo__description">
+              <h2 class="photo-promo__title">
+                Pěšky po Kanárských ostrovech
+              </h2>
+              </div>
+            </div>
+            
           </div>
     </div>
 
     <div class="news">
         <h2 class="news__title">Novinky</h2>
-        <div class="display-flex">
+        <div class="news-grid">
             <div class="news-item">
                 <p class="news-item__date">15. 8. 2020</p>
                 <h4 class="news-item__title">Magický Zanzibar</h4>
@@ -123,6 +168,6 @@
     <footer class="footer">
         <p class="footer__content">©2021, Czechitas</p>
     </footer>
-
+    </div>
   </body>
 </html>

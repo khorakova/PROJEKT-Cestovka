@@ -1,1 +1,143 @@
-/*# sourceMappingURL=style.css.map */
+.travel-agency {
+  width: 480px;
+  padding: 40px 20px;
+  margin: 0 auto;
+}
+
+.logo {
+  height: 30px;
+  text-align: center;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding-left: 0;
+}
+.menu__item {
+  color: #F03000;
+  padding: 20px;
+  font-size: 18px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+}
+.menu__item:hover {
+  background-color: #F03000;
+  color: white;
+  padding: 20px;
+}
+
+.photo-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1f;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.photo-promo {
+  padding: 20px;
+  color: white;
+  display: grid;
+  grid-template-rows: 50% 50%;
+  width: 440px;
+  height: 150px;
+}
+.photo-promo--big {
+  height: 240px;
+}
+.photo-promo__price {
+  padding-top: 10px;
+}
+.photo-promo__price--in {
+  display: inline;
+  background-color: #F03000;
+  padding: 10px;
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+}
+.photo-promo__description {
+  align-self: end;
+}
+.photo-promo__title {
+  font-size: 20px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  margin: 0;
+}
+.photo-promo__title--big {
+  font-size: 28px;
+  margin-bottom: 16px;
+}
+.photo-promo__subtitle {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.8);
+}
+.photo-promo__background {
+  background-position: center;
+  background-size: cover;
+}
+.photo-promo__background--first {
+  background-image: url(/images/palmy.png);
+}
+.photo-promo__background--second {
+  background-image: url(/images/jezero2.png);
+}
+.photo-promo__background--third {
+  background-image: url(/images/nakole.png);
+}
+.photo-promo__background--fourth {
+  background-image: url(/images/podkova.png);
+}
+.photo-promo__background--fifth {
+  background-image: url(/images/zatoka.png);
+}
+.photo-promo__background--sixth {
+  background-image: url(/images/lodicka.png);
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.services-item {
+  background-color: #F0F0F0;
+  padding: 20px 30px;
+  display: flex;
+}
+.services-item__image {
+  flex-basis: 20%;
+  height: 40px;
+}
+.services-item__content {
+  flex-basis: 80%;
+}
+.services-item__title {
+  color: #F03000;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  margin: 0;
+  margin-bottom: 10px;
+}
+.services-item__description {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  margin: 0;
+}
+
+.last-minute__title, .news__title {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+}/*# sourceMappingURL=style.css.map */
