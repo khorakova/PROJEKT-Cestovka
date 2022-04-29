@@ -77,7 +77,6 @@
 }
 
 .photo-promo {
-  padding: 20px;
   color: white;
   position: relative;
   display: flex;
@@ -102,6 +101,7 @@
   width: -moz-fit-content;
   width: fit-content;
   padding: 10px;
+  margin: 20px;
 }
 .photo-promo__price-text {
   margin: 0;
@@ -120,6 +120,10 @@
 .photo-promo__subtitle {
   font-family: "Open Sans", sans-serif;
   margin-bottom: 0;
+}
+.photo-promo__description {
+  padding: 20px;
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.2));
 }
 
 .services-grid {

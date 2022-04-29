@@ -78,7 +78,6 @@ $f-secondary: 'Open Sans', sans-serif;
 }
 
 .photo-promo {
-    padding: $space-primary;
     color: white;
     position: relative;
     display: flex;
@@ -99,6 +98,7 @@ $f-secondary: 'Open Sans', sans-serif;
         display: block;
         width: fit-content;
         padding: 10px;
+        margin: $space-primary;
     }
     &__price-text {
         margin: 0;
@@ -117,6 +117,10 @@ $f-secondary: 'Open Sans', sans-serif;
     &__subtitle {
         font-family: $f-secondary;
         margin-bottom: 0;
+    }
+    &__description {
+        padding: $space-primary;
+        background-image: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.2));
     }
 }
 
