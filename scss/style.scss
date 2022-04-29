@@ -8,9 +8,18 @@ $f-secondary: 'Open Sans', sans-serif;
 
 
 .travel-agency {
-    width: 480px;
-    padding: 40px 20px;
+    padding: 0 20px;
     margin: 0 auto;
+}
+
+.header {
+    margin-top: 36px;
+    @media screen and (min-width: 768px) {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 56px 0;
+    }
 }
 
 .logo {
@@ -28,7 +37,7 @@ $f-secondary: 'Open Sans', sans-serif;
         padding: $space-primary;
         font-size: 18px;
         font-family: $f-primary;
-        font-weight: 400;;
+        font-weight: bold;
     }
     &__item:hover {
         background-color: $c-primary;
@@ -40,75 +49,74 @@ $f-secondary: 'Open Sans', sans-serif;
 .photo-grid {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1f;
+    grid-template-rows: 240px 150px 150px;
     gap: 20px;
     margin-bottom: 40px;
+    @media screen and (min-width: 768px) {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 380px 180px;
+    }
+    @media screen and (min-width: 960px) {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 180px);
+    }
+}
+
+.photo-grid .photo-promo:first-child {
+    @media screen and (min-width: 768px) {
+        grid-column: 1 / span 2;
+    }
+    @media screen and (min-width: 960px) {
+        grid-row: 1 / span 2;
+    }
+}
+
+.photo-grid--alt .photo-promo:first-child {
+    @media screen and (min-width: 960px) {
+        grid-column: 2 / span 2;
+    }
 }
 
 .photo-promo {
     padding: $space-primary;
     color: white;
-    display: grid;
-    grid-template-rows: 50% 50%;
-    width: 440px;
-    height: 150px;
-    &--big {
-        height: 240px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    &__image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
     }
     &__price {
-        padding-top: 10px;
-        &--in {
-            display: inline;
-            background-color: $c-primary;
-            padding: 10px;
-            margin: 0;
-            font-family: $f-primary;
-            font-weight: 400;
-            font-size: 18px;
-        }
+        color: white;
+        background-color: $c-primary;
+        display: block;
+        width: fit-content;
+        padding: 10px;
     }
-    &__description {
-        align-self: end;
+    &__price-text {
+        margin: 0;
+        font-size: 18px;
+        font-family: $f-primary;
     }
     &__title {
-        font-size: 20px;
         font-family: $f-primary;
         font-weight: 600;
+        font-size: 20px;
         margin: 0;
         &--big {
-            font-size: 28px; 
-            margin-bottom: 16px;
+            font-size: 28px;
         }
     }
     &__subtitle {
         font-family: $f-secondary;
-        font-weight: 400;
-        font-size: 16px;
-        margin: 0;
-        color: rgb(255, 255, 255, 0.8);
-    }
-    &__background {
-        background-position: center;
-        background-size: cover;
-        &--first {
-            background-image: url(/images/palmy.png);
-           
-        }
-        &--second {
-            background-image: url(/images/jezero2.png);
-        }
-        &--third {
-            background-image: url(/images/nakole.png);
-        }
-        &--fourth {
-            background-image: url(/images/podkova.png);
-        }
-        &--fifth {
-            background-image: url(/images/zatoka.png);
-        }
-        &--sixth {
-            background-image: url(/images/lodicka.png);
-        }
+        margin-bottom: 0;
     }
 }
 
@@ -117,6 +125,16 @@ $f-secondary: 'Open Sans', sans-serif;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(4, 1fr);
     gap: 10px;
+    margin-bottom: 40px;
+    @media screen and (min-width: 768px) {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 20px;
+    }
+    @media screen and (min-width: 960px) {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 1fr;
+    }
 }
 
 .services-item {
@@ -144,10 +162,59 @@ $f-secondary: 'Open Sans', sans-serif;
         font-size: 16px;
         margin: 0;
     }
+    @media screen and (min-width: 768px) {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
 }
 
 .last-minute__title, .news__title {
     font-family: $f-primary;
     font-weight: 600;
     font-size: 24px;
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 20px;
+    @media screen and (min-width: 960px) {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr;
+    }
+}
+
+.news-item {
+    background-color: $c-background-box;
+    padding: $space-primary 30px;
+    display: flex;
+    flex-direction: column;
+    font-family: $f-primary;
+    font-weight: bold;
+    gap: 10px;
+    &__date {
+        margin: 0;
+        color: $c-date;
+    }
+    &__title {
+        margin: 0;
+        color: $c-primary;
+    }
+    &__description {
+        margin: 0;
+    }
+}
+
+.footer {
+    background-color: $c-footer;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-family: $f-primary;
+    margin-top: 40px;
+    &__content {
+        margin: 0;
+    }
 }
